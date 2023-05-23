@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b222e004b99e8890c486fa1032e8395",
+    "content-hash": "558cb9accf5d5eca37183001a6cc49dd",
     "packages": [
         {
             "name": "brick/math",
@@ -1612,40 +1612,39 @@
             "time": "2022-04-17T13:12:02+00:00"
         },
         {
-            "name": "lightsaml/lightsaml",
-            "version": "2.3.4",
+            "name": "litesaml/lightsaml",
+            "version": "v4.1.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/lightSAML/lightSAML.git",
-                "reference": "c803d864c650dc8948078b04f00928f53edffbd7"
+                "url": "https://github.com/litesaml/lightsaml.git",
+                "reference": "b6aa6f41c3a051a52e39ddc3a7b753a8601bee69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lightSAML/lightSAML/zipball/c803d864c650dc8948078b04f00928f53edffbd7",
-                "reference": "c803d864c650dc8948078b04f00928f53edffbd7",
+                "url": "https://api.github.com/repos/litesaml/lightsaml/zipball/b6aa6f41c3a051a52e39ddc3a7b753a8601bee69",
+                "reference": "b6aa6f41c3a051a52e39ddc3a7b753a8601bee69",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.5",
+                "php": ">=7.4",
+                "psr/event-dispatcher": "^1.0",
                 "robrichards/xmlseclibs": "~2.0|~3.0|~4.0",
-                "symfony/event-dispatcher": "~5.0|~6.0",
                 "symfony/http-foundation": "~5.0|~6.0"
             },
             "require-dev": {
-                "monolog/monolog": "^2.0.0",
+                "litesaml/schemas": "~1.0.0",
+                "marcocesarato/php-conventional-changelog": "^1.15",
+                "monolog/monolog": "^2.0|^3.0",
+                "phpstan/phpstan": "^1.8",
                 "phpunit/phpunit": "~8.4|~9.5",
                 "pimple/pimple": "~3.0",
                 "squizlabs/php_codesniffer": "^3.6",
-                "symfony/css-selector": "~5.0",
-                "symfony/dom-crawler": "~5.0"
-            },
-            "suggest": {
-                "lightsaml/sp-bundle": "Symfony 2 SP security bundle",
-                "lightsaml/symfony-bridge": "Symfony 2 build container bridge"
+                "symfony/css-selector": "~5.0|~6.0",
+                "symfony/dom-crawler": "~5.0|~6.0"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "LightSaml\\": "src/"
                 }
             },
@@ -1655,14 +1654,17 @@
             ],
             "authors": [
                 {
+                    "name": "William",
+                    "email": "work@suppo.fr"
+                },
+                {
                     "name": "Milos Tomic",
                     "email": "tmilos@gmail.com",
                     "homepage": "https://github.com/tmilos/",
                     "role": "Developer"
                 }
             ],
-            "description": "Light SAML 2.0 PHP library",
-            "homepage": "https://www.lightsaml.com/",
+            "description": "SAML 2.0 PHP library",
             "keywords": [
                 "SAML 2.0",
                 "Single Logout",
@@ -1672,12 +1674,11 @@
                 "php"
             ],
             "support": {
-                "docs": "http://www.lightsaml.com/LightSAML-Core/",
-                "issues": "https://github.com/lightsaml/lightsaml/issues",
-                "source": "https://github.com/lightSAML/lightSAML"
+                "docs": "https://docs.litesaml.com",
+                "issues": "https://github.com/litesaml/lightsaml/issues",
+                "source": "https://github.com/litesaml/lightsaml"
             },
-            "abandoned": "litesaml/lightsaml",
-            "time": "2022-05-27T11:58:06+00:00"
+            "time": "2023-04-14T14:11:32+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -7919,5 +7920,5 @@
         "php": "^8.0.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }

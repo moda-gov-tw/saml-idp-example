@@ -44,7 +44,7 @@ class LoginController extends Controller
         $id = $saml_request->getMessage()->getID();
 
 
-        $user_id = "meow1234";
+        $user_id = env("SAML_ISSUER");
         $user_email = $request->username;
 
 
@@ -70,14 +70,14 @@ class LoginController extends Controller
             ->setIssueInstant(new \DateTime())
             ->setDestination($acsUrl)
                 // We obtain the Entity ID from the Idp.
-            ->setIssuer(new Issuer("https://twfido.pdis.dev/"))
+            ->setIssuer(new Issuer(env("SAML_NAME_ID")))
             ;
 
         $assertion
             ->setId(\LightSaml\Helper::generateID())
             ->setIssueInstant(new \DateTime())
                 // We obtain the Entity ID from the Idp.
-            ->setIssuer(new Issuer("https://twfido.pdis.dev/"))
+            ->setIssuer(new Issuer(env("SAML_NAME_ID")))
             ->setSubject(
                     (new Subject())
                         // Here we set the NameID that identifies the name of the user.

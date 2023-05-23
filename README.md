@@ -8,3 +8,6 @@
 ## 重要檔案
 - app/Http/Controllers/LoginController.php
 - routes/web.php
+
+
+openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout key.pem -out cert.pem -days 3650

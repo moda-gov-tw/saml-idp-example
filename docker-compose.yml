@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  php:
+    build: .
+    ports:
+      - "80:80"
+    env_file:
+      - .env
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    entrypoint: ["cloudflared", "tunnel", "run"]
+    environment:
+      - "TUNNEL_TOKEN=${TUNNEL_TOKEN}"
